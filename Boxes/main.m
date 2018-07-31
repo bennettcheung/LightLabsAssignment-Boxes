@@ -10,11 +10,12 @@
 #import "Box.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Box *box1 =[[Box alloc] initWithDimensions:20 width:30 length:40];
+        Box *box1 =[[Box alloc] initWithDimensions:20 width:5 length:3];
         Box *box2 =[[Box alloc] initWithDimensions:10 width:10 length:10];
        
-        NSLog(@"The box is %f cubic inches", [box1 calculateVolume]);
-        NSLog(@"Our box fits inside the other box %i times", [box2 howManyTimes:box1]);
+        NSLog(@"The first box is %f cubic inches", [box1 calculateVolume]);
+        NSLog(@"The other box is %f cubic inches", [box2 calculateVolume]);
+        NSLog(@"The smaller box fits inside the bigger box %i times", [box1 howManyTimes:box2]);
     }
     return 0;
 }

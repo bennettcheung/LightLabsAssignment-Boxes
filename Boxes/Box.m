@@ -28,9 +28,9 @@
 -(int)howManyTimes:(Box *)testBox {
     float testBoxVolume = [testBox calculateVolume];
     float ourBox = [self calculateVolume];
-    if (testBoxVolume > ourBox)
+    if (testBoxVolume >= ourBox)
         return (int) (testBoxVolume / ourBox);
     else
-        return 0;
+        return (int) (ourBox / testBoxVolume);
 }
 @end
