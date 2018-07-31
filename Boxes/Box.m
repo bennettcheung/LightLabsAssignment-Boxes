@@ -23,5 +23,14 @@
 }
 -(float)calculateVolume {
     return self.height * self.length * self.width;
+
+}
+-(int)howManyTimes:(Box *)testBox {
+    float testBoxVolume = [testBox calculateVolume];
+    float ourBox = [self calculateVolume];
+    if (testBoxVolume > ourBox)
+        return (int) (testBoxVolume / ourBox);
+    else
+        return 0;
 }
 @end

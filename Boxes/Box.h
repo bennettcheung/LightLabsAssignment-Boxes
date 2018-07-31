@@ -17,4 +17,5 @@
                            width: (float) w
                            length: (float)l;
 -(float)calculateVolume;
+-(int)howManyTimes:(Box*)testBox;
 @end
